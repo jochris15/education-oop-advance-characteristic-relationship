@@ -188,6 +188,7 @@ console.log(jeff.phone);
 - Tidak bisa akses properti object instance, tapi bisa akses properti statis dari class
 <br>
 <br>
+
 ```js
 class Smartphone {
     static notif = 'Hello World'
@@ -204,7 +205,6 @@ class Smartphone {
         let app = new Application(name, category)
         this.application.push(app)
     } // instance method, punya object instance, kalo mau pake harus instantiate dulu
-```
 
     static notification() {
         console.log(this.notif + 'new notification');
