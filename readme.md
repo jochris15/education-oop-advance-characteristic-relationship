@@ -88,11 +88,29 @@ console.log(myMotorcycle.newBrand);
 ```
 
 # Inheritance
-Proses pewarisan properti / karakteristik dari parent ke anaknya, diimplementasikan dengan membuat custom subclass menggunakan ``extends``
+Proses pewarisan properti / karakteristik dari parent ke anaknya, diimplementasikan dengan membuat custom subclass menggunakan `extends`
+
+Untuk mengakses properti / method parent, gunakan `super` keyword
 ```js
 class Nissan extends Car {
     constructor(cc, harga, color) {
         super("Nissan", cc, harga) // fokus ke constructor parent
+        this.color = color
+    }
+
+    super.start() // fokus ke method parent, hanya contoh pemanggilan method aja, ga berguna disini
+}
+
+const myNissan = new Nissan(1200, 500000000, "blue")
+console.log(myNissan);
+```
+
+# Polymorphism
+Proses `overriding` / `penumpukan` method yang sudah ada di parent class, sehingga bisa mengubah perilaku method tersebut di subclass
+```js
+class Nissan extends Car {
+    constructor(cc, harga, color) {
+        super("Nissan", cc, harga)
         this.color = color
     }
 
@@ -101,7 +119,7 @@ class Nissan extends Car {
         console.log("Drifting bro like han tokyo drift...");
     }
 
-    regulation() {
+    regulation() { // Polymorphism
         if (this.engineCapacity <= 1200) {
             if (this.color == "red") {
                 return "LCGC"
@@ -119,7 +137,6 @@ console.log(myNissan);
 
 myNissan.brake()
 ```
-
 # Object Relationship
 ## Composition
 - Hubungan antar class yang saling ketergantungan
