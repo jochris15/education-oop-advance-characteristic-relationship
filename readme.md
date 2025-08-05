@@ -3,6 +3,7 @@ Karakteristik OOP terbagi menjadi 3 yaitu :
 - Abstraction
 - Encapsulation
 - Inheritance
+- Polymorphism
 
 # Abstraction
 Proses penjelasan kegunaan tanpa memberi tahu bagaimana cara kerjanya, di implementasikan dalam proses instantiate
