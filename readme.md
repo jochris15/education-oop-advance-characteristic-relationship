@@ -137,37 +137,3 @@ console.log(myNissan);
 
 myNissan.brake()
 ```
-# Method
-## Instance Method
-- Sebuah method yang dimiliki oleh object instance
-- Jadi jika mau dipake, harus melakukan proses instantiate dulu
-- Bisa akses properti dari object instance itu sendiri
-## Static Method
-- Sebuah method yang dimiliki oleh classnya tersebut, bukan object instance
-- Jadi bisa dipake tanpa harus melakukan proses instantiate
-- Tidak bisa akses properti object instance, tapi bisa akses properti statis dari class
-<br>
-<br>
-
-```js
-class Smartphone {
-    static notif = 'Hello World'
-    // ini variable statis milik class
-    constructor(brand, camera, memory, batteryPercentage) {
-        this.brand = brand
-        this.camera = camera
-        this.memory = memory
-        this.battery = new Battery(batteryPercentage)
-        this.application = []
-    }
-
-    installApp(name, category) {
-        let app = new Application(name, category)
-        this.application.push(app)
-    } // instance method, punya object instance, kalo mau pake harus instantiate dulu
-
-    static notification() {
-        console.log(this.notif + 'new notification');
-    } // static method, punya classnya, bisa langsung dipake tanpa proses instantiate
-}
-```
