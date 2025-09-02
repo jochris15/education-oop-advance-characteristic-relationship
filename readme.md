@@ -1,5 +1,5 @@
 # OOP Characteristic
-Karakteristik OOP terbagi menjadi 3 yaitu : 
+Karakteristik OOP terbagi menjadi 4 yaitu : 
 - Abstraction
 - Encapsulation
 - Inheritance
